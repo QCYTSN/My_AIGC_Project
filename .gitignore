@@ -1,0 +1,19 @@
+# 忽略所有隐藏文件和文件夹
+.*
+!.gitignore
+
+# 忽略巨大的模型文件和输出结果
+outputs/
+*.safetensors
+*.bin
+*.ckpt
+*.pth
+
+# 忽略数据集图片 (如果你不想把几百MB图片也传上去)
+data/
+
+# 忽略 Python 编译文件和环境
+__pycache__/
+*.pyc
+env/
+venv/
