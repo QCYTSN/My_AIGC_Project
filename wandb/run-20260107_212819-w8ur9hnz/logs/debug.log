@@ -1,0 +1,27 @@
+2026-01-07 21:28:19,464 INFO    MainThread:11901 [wandb_setup.py:_flush():80] Current SDK version is 0.23.1
+2026-01-07 21:28:19,464 INFO    MainThread:11901 [wandb_setup.py:_flush():80] Configure stats pid to 11901
+2026-01-07 21:28:19,464 INFO    MainThread:11901 [wandb_setup.py:_flush():80] Loading settings from /root/.config/wandb/settings
+2026-01-07 21:28:19,465 INFO    MainThread:11901 [wandb_setup.py:_flush():80] Loading settings from /root/My_AIGC_Project/wandb/settings
+2026-01-07 21:28:19,465 INFO    MainThread:11901 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2026-01-07 21:28:19,465 INFO    MainThread:11901 [wandb_init.py:setup_run_log_directory():714] Logging user logs to /root/My_AIGC_Project/wandb/run-20260107_212819-w8ur9hnz/logs/debug.log
+2026-01-07 21:28:19,465 INFO    MainThread:11901 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to /root/My_AIGC_Project/wandb/run-20260107_212819-w8ur9hnz/logs/debug-internal.log
+2026-01-07 21:28:19,465 INFO    MainThread:11901 [wandb_init.py:init():841] calling init triggers
+2026-01-07 21:28:19,465 INFO    MainThread:11901 [wandb_init.py:init():846] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2026-01-07 21:28:19,465 INFO    MainThread:11901 [wandb_init.py:init():889] starting backend
+2026-01-07 21:28:19,741 INFO    MainThread:11901 [wandb_init.py:init():892] sending inform_init request
+2026-01-07 21:28:19,747 INFO    MainThread:11901 [wandb_init.py:init():900] backend started and connected
+2026-01-07 21:28:19,752 INFO    MainThread:11901 [wandb_init.py:init():970] updated telemetry
+2026-01-07 21:28:19,759 INFO    MainThread:11901 [wandb_init.py:init():994] communicating run to backend with 90.0 second timeout
+2026-01-07 21:28:22,140 INFO    MainThread:11901 [wandb_init.py:init():1041] starting run threads in backend
+2026-01-07 21:28:22,364 INFO    MainThread:11901 [wandb_run.py:_console_start():2521] atexit reg
+2026-01-07 21:28:22,364 INFO    MainThread:11901 [wandb_run.py:_redirect():2369] redirect: wrap_raw
+2026-01-07 21:28:22,364 INFO    MainThread:11901 [wandb_run.py:_redirect():2438] Wrapping output streams.
+2026-01-07 21:28:22,365 INFO    MainThread:11901 [wandb_run.py:_redirect():2461] Redirects installed.
+2026-01-07 21:28:22,370 INFO    MainThread:11901 [wandb_init.py:init():1081] run started, returning control to user process
+2026-01-07 21:28:22,372 INFO    MainThread:11901 [wandb_run.py:_config_callback():1396] config_cb None None {'pretrained_model_name_or_path': './sd-v1-5', 'revision': None, 'variant': None, 'tokenizer_name': None, 'instance_data_dir': 'data/pink_sunglasses', 'class_data_dir': None, 'instance_prompt': 'a photo of a sks sunglasses', 'class_prompt': None, 'validation_prompt': None, 'num_validation_images': 4, 'validation_epochs': 50, 'with_prior_preservation': False, 'prior_loss_weight': 1.0, 'num_class_images': 100, 'output_dir': 'outputs/lora_sunglasses', 'seed': 0, 'resolution': 512, 'center_crop': False, 'train_text_encoder': False, 'train_batch_size': 1, 'sample_batch_size': 4, 'num_train_epochs': 167, 'max_train_steps': 1000, 'checkpointing_steps': 500, 'checkpoints_total_limit': None, 'resume_from_checkpoint': None, 'gradient_accumulation_steps': 1, 'gradient_checkpointing': False, 'learning_rate': 0.0001, 'scale_lr': False, 'lr_scheduler': 'constant', 'lr_warmup_steps': 0, 'lr_num_cycles': 1, 'lr_power': 1.0, 'dataloader_num_workers': 0, 'use_8bit_adam': False, 'adam_beta1': 0.9, 'adam_beta2': 0.999, 'adam_weight_decay': 0.01, 'adam_epsilon': 1e-08, 'max_grad_norm': 1.0, 'push_to_hub': False, 'hub_token': None, 'hub_model_id': None, 'logging_dir': 'logs', 'allow_tf32': False, 'report_to': 'wandb', 'mixed_precision': None, 'prior_generation_precision': None, 'local_rank': -1, 'enable_xformers_memory_efficient_attention': False, 'pre_compute_text_embeddings': False, 'tokenizer_max_length': None, 'text_encoder_use_attention_mask': False, 'class_labels_conditioning': None, 'rank': 4, 'lora_dropout': 0.0, 'image_interpolation_mode': 'lanczos'}
+2026-01-07 21:31:45,843 INFO    MainThread:11901 [wandb_run.py:_finish():2287] finishing run peanut2330034007-bnbu/dreambooth-lora/w8ur9hnz
+2026-01-07 21:31:45,843 INFO    MainThread:11901 [wandb_run.py:_atexit_cleanup():2486] got exitcode: 0
+2026-01-07 21:31:45,843 INFO    MainThread:11901 [wandb_run.py:_restore():2468] restore
+2026-01-07 21:31:45,844 INFO    MainThread:11901 [wandb_run.py:_restore():2474] restore done
+2026-01-07 21:31:48,895 INFO    MainThread:11901 [wandb_run.py:_footer_sync_info():3862] logging synced files

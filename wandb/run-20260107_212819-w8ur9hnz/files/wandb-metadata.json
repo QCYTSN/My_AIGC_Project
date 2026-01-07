@@ -1,0 +1,56 @@
+{
+  "os":  "Linux-5.15.0-94-generic-x86_64-with-glibc2.35",
+  "python":  "CPython 3.10.19",
+  "startedAt":  "2026-01-07T13:28:19.462846Z",
+  "args":  [
+    "--pretrained_model_name_or_path=./sd-v1-5",
+    "--instance_data_dir=data/pink_sunglasses",
+    "--output_dir=outputs/lora_sunglasses",
+    "--instance_prompt=a photo of a sks sunglasses",
+    "--resolution=512",
+    "--train_batch_size=1",
+    "--gradient_accumulation_steps=1",
+    "--checkpointing_steps=500",
+    "--learning_rate=1e-4",
+    "--lr_scheduler=constant",
+    "--lr_warmup_steps=0",
+    "--max_train_steps=1000",
+    "--seed=0",
+    "--report_to=wandb"
+  ],
+  "program":  "/root/My_AIGC_Project/src/train_dreambooth_lora.py",
+  "codePath":  "src/train_dreambooth_lora.py",
+  "codePathLocal":  "src/train_dreambooth_lora.py",
+  "git":  {
+    "remote":  "https://github.com/QCYTSN/My_AIGC_Project.git",
+    "commit":  "8bbcf1b79ab4eac08936e8fde2934374a9c2daad"
+  },
+  "email":  "2558348385@qq.com",
+  "root":  "/root/My_AIGC_Project",
+  "host":  "autodl-container-85724e8e01-dde8d335",
+  "executable":  "/root/miniconda3/envs/aigc/bin/python3.10",
+  "cpu_count":  96,
+  "cpu_count_logical":  192,
+  "gpu":  "NVIDIA GeForce RTX 4090 D",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "32212254720",
+      "used":  "14539808768"
+    }
+  },
+  "memory":  {
+    "total":  "1081834971136"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4090 D",
+      "memoryTotal":  "25757220864",
+      "cudaCores":  14592,
+      "architecture":  "Ada",
+      "uuid":  "GPU-55b03037-d097-1f96-c23f-d20ef9c54936"
+    }
+  ],
+  "cudaVersion":  "12.4",
+  "writerId":  "1arctbrvjrs8ujwx9yw3d6vgsct3aue0"
+}

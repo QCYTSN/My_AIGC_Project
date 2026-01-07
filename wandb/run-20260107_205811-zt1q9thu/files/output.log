@@ -1,0 +1,53 @@
+01/07/2026 20:58:13 - INFO - __main__ - ***** Running training *****
+01/07/2026 20:58:13 - INFO - __main__ -   Num examples = 4
+01/07/2026 20:58:13 - INFO - __main__ -   Num batches each epoch = 4
+01/07/2026 20:58:13 - INFO - __main__ -   Num Epochs = 250
+01/07/2026 20:58:13 - INFO - __main__ -   Instantaneous batch size per device = 1
+01/07/2026 20:58:13 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 1
+01/07/2026 20:58:13 - INFO - __main__ -   Gradient Accumulation steps = 1
+01/07/2026 20:58:13 - INFO - __main__ -   Total optimization steps = 1000
+Steps:  50%|███████████████████████████████████                                   | 500/1000 [02:29<02:03,  4.06it/s, loss=0.0374, lr=0.0001]01/07/2026 21:00:43 - INFO - accelerate.accelerator - Saving current state to outputs/test_wandb/checkpoint-500
+Model weights saved in outputs/test_wandb/checkpoint-500/pytorch_lora_weights.safetensors
+01/07/2026 21:00:43 - INFO - accelerate.checkpointing - Optimizer state saved in outputs/test_wandb/checkpoint-500/optimizer.bin
+01/07/2026 21:00:43 - INFO - accelerate.checkpointing - Scheduler state saved in outputs/test_wandb/checkpoint-500/scheduler.bin
+01/07/2026 21:00:43 - INFO - accelerate.checkpointing - Sampler state for dataloader 0 saved in outputs/test_wandb/checkpoint-500/sampler.bin
+01/07/2026 21:00:43 - INFO - accelerate.checkpointing - Random states saved in outputs/test_wandb/checkpoint-500/random_states_0.pkl
+01/07/2026 21:00:43 - INFO - __main__ - Saved state to outputs/test_wandb/checkpoint-500
+Steps: 100%|████████████████████████████████████████████████████████████████████| 1000/1000 [05:04<00:00,  3.93it/s, loss=0.00534, lr=0.0001]01/07/2026 21:03:18 - INFO - accelerate.accelerator - Saving current state to outputs/test_wandb/checkpoint-1000
+Model weights saved in outputs/test_wandb/checkpoint-1000/pytorch_lora_weights.safetensors
+01/07/2026 21:03:18 - INFO - accelerate.checkpointing - Optimizer state saved in outputs/test_wandb/checkpoint-1000/optimizer.bin
+01/07/2026 21:03:18 - INFO - accelerate.checkpointing - Scheduler state saved in outputs/test_wandb/checkpoint-1000/scheduler.bin
+01/07/2026 21:03:18 - INFO - accelerate.checkpointing - Sampler state for dataloader 0 saved in outputs/test_wandb/checkpoint-1000/sampler.bin
+01/07/2026 21:03:18 - INFO - accelerate.checkpointing - Random states saved in outputs/test_wandb/checkpoint-1000/random_states_0.pkl
+01/07/2026 21:03:18 - INFO - __main__ - Saved state to outputs/test_wandb/checkpoint-1000
+Steps: 100%|█████████████████████████████████████████████████████████████████████| 1000/1000 [05:04<00:00,  3.93it/s, loss=0.0172, lr=0.0001]Model weights saved in outputs/test_wandb/pytorch_lora_weights.safetensors
+{'requires_safety_checker', 'image_encoder'} was not found in config. Values will be initialized to default values.
+                                                                                                                                             CLIPFeatureExtractor appears to have been deprecated in transformers. Using CLIPImageProcessor instead.
+Loaded feature_extractor as CLIPFeatureExtractor from `feature_extractor` subfolder of ./sd-v1-5.                      | 0/7 [00:00<?, ?it/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loaded safety_checker as StableDiffusionSafetyChecker from `safety_checker` subfolder of ./sd-v1-5.
+                                                                                                                                             Loaded text_encoder as CLIPTextModel from `text_encoder` subfolder of ./sd-v1-5.
+Loading pipeline components...:  29%|█████████████████████▏                                                    | 2/7 [00:00<00:01,  3.13it/s]An error occurred while trying to fetch ./sd-v1-5/unet: Error no file named diffusion_pytorch_model.safetensors found in directory ./sd-v1-5/unet.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.                       | 3/7 [00:00<00:01,  3.57it/s]
+Instantiating UNet2DConditionModel model under default dtype torch.float32.
+{'encoder_hid_dim', 'time_embedding_act_fn', 'time_embedding_type', 'num_class_embeds', 'addition_embed_type', 'reverse_transformer_layers_per_block', 'dual_cross_attention', 'conv_in_kernel', 'projection_class_embeddings_input_dim', 'attention_type', 'transformer_layers_per_block', 'class_embed_type', 'dropout', 'encoder_hid_dim_type', 'upcast_attention', 'resnet_out_scale_factor', 'resnet_skip_time_act', 'addition_time_embed_dim', 'only_cross_attention', 'class_embeddings_concat', 'num_attention_heads', 'resnet_time_scale_shift', 'addition_embed_type_num_heads', 'mid_block_type', 'cross_attention_norm', 'use_linear_projection', 'time_embedding_dim', 'timestep_post_act', 'conv_out_kernel', 'mid_block_only_cross_attention', 'time_cond_proj_dim'} was not found in config. Values will be initialized to default values.
+All model checkpoint weights were used when initializing UNet2DConditionModel.
+
+All the weights of UNet2DConditionModel were initialized from the model checkpoint at ./sd-v1-5/unet.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use UNet2DConditionModel for predictions without further training.
+Loaded unet as UNet2DConditionModel from `unet` subfolder of ./sd-v1-5.
+                                                                                                                                             {'timestep_spacing', 'prediction_type'} was not found in config. Values will be initialized to default values.
+Loaded scheduler as PNDMScheduler from `scheduler` subfolder of ./sd-v1-5.█████▎                               | 4/7 [00:01<00:00,  4.03it/s]
+An error occurred while trying to fetch ./sd-v1-5/vae: Error no file named diffusion_pytorch_model.safetensors found in directory ./sd-v1-5/vae.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+Instantiating AutoencoderKL model under default dtype torch.float32.
+{'use_quant_conv', 'mid_block_add_attention', 'scaling_factor', 'use_post_quant_conv', 'latents_mean', 'latents_std', 'shift_factor', 'force_upcast'} was not found in config. Values will be initialized to default values.
+All model checkpoint weights were used when initializing AutoencoderKL.
+
+All the weights of AutoencoderKL were initialized from the model checkpoint at ./sd-v1-5/vae.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use AutoencoderKL for predictions without further training.
+Loaded vae as AutoencoderKL from `vae` subfolder of ./sd-v1-5.
+Loaded tokenizer as CLIPTokenizer from `tokenizer` subfolder of ./sd-v1-5.
+Loading pipeline components...: 100%|██████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  6.02it/s]
+Loading unet.ine components...: 100%|██████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  8.56it/s]
+No LoRA keys associated to CLIPTextModel found with the prefix='text_encoder'. This is safe to ignore if LoRA state dict didn't originally have any CLIPTextModel related params. You can also try specifying `prefix=None` to resolve the warning. Otherwise, open an issue if you think it's unexpected: https://github.com/huggingface/diffusers/issues/new

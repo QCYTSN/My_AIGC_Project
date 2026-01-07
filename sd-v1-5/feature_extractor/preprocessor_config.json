@@ -1,7 +1,6 @@
 {
   "crop_size": 224,
   "do_center_crop": true,
-  "do_convert_rgb": true,
   "do_normalize": true,
   "do_resize": true,
   "feature_extractor_type": "CLIPFeatureExtractor",

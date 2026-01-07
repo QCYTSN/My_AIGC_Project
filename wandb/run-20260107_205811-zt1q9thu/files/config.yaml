@@ -1,0 +1,194 @@
+_wandb:
+    value:
+        cli_version: 0.23.1
+        e:
+            vlvy7d8i32dh1z5ks04mrjqkf8nhcnac:
+                args:
+                    - --pretrained_model_name_or_path=./sd-v1-5
+                    - --instance_data_dir=data/dog
+                    - --output_dir=outputs/test_wandb
+                    - --instance_prompt=a photo of a sks dog
+                    - --resolution=512
+                    - --train_batch_size=1
+                    - --gradient_accumulation_steps=1
+                    - --checkpointing_steps=500
+                    - --learning_rate=1e-4
+                    - --lr_scheduler=constant
+                    - --lr_warmup_steps=0
+                    - --max_train_steps=1000
+                    - --seed=0
+                    - --report_to=wandb
+                codePath: src/train_dreambooth_lora.py
+                codePathLocal: src/train_dreambooth_lora.py
+                cpu_count: 96
+                cpu_count_logical: 192
+                cudaVersion: "12.4"
+                disk:
+                    /:
+                        total: "32212254720"
+                        used: "14190329856"
+                email: 2558348385@qq.com
+                executable: /root/miniconda3/envs/aigc/bin/python3.10
+                git:
+                    commit: 8bbcf1b79ab4eac08936e8fde2934374a9c2daad
+                    remote: https://github.com/QCYTSN/My_AIGC_Project.git
+                gpu: NVIDIA GeForce RTX 4090 D
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 14592
+                      memoryTotal: "25757220864"
+                      name: NVIDIA GeForce RTX 4090 D
+                      uuid: GPU-55b03037-d097-1f96-c23f-d20ef9c54936
+                host: autodl-container-85724e8e01-dde8d335
+                memory:
+                    total: "1081834971136"
+                os: Linux-5.15.0-94-generic-x86_64-with-glibc2.35
+                program: /root/My_AIGC_Project/src/train_dreambooth_lora.py
+                python: CPython 3.10.19
+                root: /root/My_AIGC_Project
+                startedAt: "2026-01-07T12:58:11.467392Z"
+                writerId: vlvy7d8i32dh1z5ks04mrjqkf8nhcnac
+        m: []
+        python_version: 3.10.19
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 71
+                - 83
+                - 98
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 71
+                - 83
+                - 98
+            "3":
+                - 2
+                - 61
+            "4": 3.10.19
+            "5": 0.23.1
+            "6": 4.57.3
+            "12": 0.23.1
+            "13": linux-x86_64
+adam_beta1:
+    value: 0.9
+adam_beta2:
+    value: 0.999
+adam_epsilon:
+    value: 1e-08
+adam_weight_decay:
+    value: 0.01
+allow_tf32:
+    value: false
+center_crop:
+    value: false
+checkpointing_steps:
+    value: 500
+checkpoints_total_limit:
+    value: null
+class_data_dir:
+    value: null
+class_labels_conditioning:
+    value: null
+class_prompt:
+    value: null
+dataloader_num_workers:
+    value: 0
+enable_xformers_memory_efficient_attention:
+    value: false
+gradient_accumulation_steps:
+    value: 1
+gradient_checkpointing:
+    value: false
+hub_model_id:
+    value: null
+hub_token:
+    value: null
+image_interpolation_mode:
+    value: lanczos
+instance_data_dir:
+    value: data/dog
+instance_prompt:
+    value: a photo of a sks dog
+learning_rate:
+    value: 0.0001
+local_rank:
+    value: -1
+logging_dir:
+    value: logs
+lora_dropout:
+    value: 0
+lr_num_cycles:
+    value: 1
+lr_power:
+    value: 1
+lr_scheduler:
+    value: constant
+lr_warmup_steps:
+    value: 0
+max_grad_norm:
+    value: 1
+max_train_steps:
+    value: 1000
+mixed_precision:
+    value: null
+num_class_images:
+    value: 100
+num_train_epochs:
+    value: 250
+num_validation_images:
+    value: 4
+output_dir:
+    value: outputs/test_wandb
+pre_compute_text_embeddings:
+    value: false
+pretrained_model_name_or_path:
+    value: ./sd-v1-5
+prior_generation_precision:
+    value: null
+prior_loss_weight:
+    value: 1
+push_to_hub:
+    value: false
+rank:
+    value: 4
+report_to:
+    value: wandb
+resolution:
+    value: 512
+resume_from_checkpoint:
+    value: null
+revision:
+    value: null
+sample_batch_size:
+    value: 4
+scale_lr:
+    value: false
+seed:
+    value: 0
+text_encoder_use_attention_mask:
+    value: false
+tokenizer_max_length:
+    value: null
+tokenizer_name:
+    value: null
+train_batch_size:
+    value: 1
+train_text_encoder:
+    value: false
+use_8bit_adam:
+    value: false
+validation_epochs:
+    value: 50
+validation_prompt:
+    value: null
+variant:
+    value: null
+with_prior_preservation:
+    value: false

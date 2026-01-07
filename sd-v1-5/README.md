@@ -1,16 +1,28 @@
 ---
+tasks:
+- text-to-image-synthesis
+model-type:
+- stable_diffusion
+domain:
+- mm
+frameworks:
+- pytorch
+customized-quickstart: False
+finetune-support: False
 license: creativeml-openrail-m
+language: 
+- cn
+- en
 tags:
 - stable-diffusion
 - stable-diffusion-diffusers
 - text-to-image
-inference: true
+- zh
+- Chinese
+
 ---
 
 # Stable Diffusion v1-5 Model Card
-
-### ⚠️ This repository is a mirror of the now deprecated `ruwnayml/stable-diffusion-v1-5`, this repository or organization are not affiliated in any way with RunwayML.
-Modifications to the original model card are in <span style="color:crimson">red</span> or <span style="color:darkgreen">green</span>
 
 Stable Diffusion is a latent text-to-image diffusion model capable of generating photo-realistic images given any text input.
 For more information about how Stable Diffusion functions, please have a look at [🤗's Stable Diffusion blog](https://huggingface.co/blog/stable_diffusion).
@@ -18,14 +30,34 @@ For more information about how Stable Diffusion functions, please have a look at
 The **Stable-Diffusion-v1-5** checkpoint was initialized with the weights of the [Stable-Diffusion-v1-2](https:/steps/huggingface.co/CompVis/stable-diffusion-v1-2) 
 checkpoint and subsequently fine-tuned on 595k steps at resolution 512x512 on "laion-aesthetics v2 5+" and 10% dropping of the text-conditioning to improve [classifier-free guidance sampling](https://arxiv.org/abs/2207.12598).
 
-You can use this both with the [🧨Diffusers library](https://github.com/huggingface/diffusers) and [RunwayML GitHub repository](https://github.com/runwayml/stable-diffusion) (<span style="color:crimson">now deprecated</span>), <span style="color:darkgreen">ComfyUI, Automatic1111, SD.Next, InvokeAI</span>.
+You can use this both with the [🧨Diffusers library](https://github.com/huggingface/diffusers) and the [RunwayML GitHub repository](https://github.com/runwayml/stable-diffusion).
 
-### Use with Diffusers
+
+### modelscope usage
+
+```python
+from modelscope.utils.constant import Tasks
+from modelscope.pipelines import pipeline
+import cv2
+
+pipe = pipeline(task=Tasks.text_to_image_synthesis, 
+                model='AI-ModelScope/stable-diffusion-v1-5',
+                model_revision='v1.0.0')
+
+prompt = '飞流直下三千尺，油画'
+output = pipe({'text': prompt})
+cv2.imwrite('result.png', output['output_imgs'][0])
+
+```
+
+
+
+### Diffusers usage
 ```py
 from diffusers import StableDiffusionPipeline
 import torch
 
-model_id = "sd-legacy/stable-diffusion-v1-5"
+model_id = "runwayml/stable-diffusion-v1-5"
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
 pipe = pipe.to("cuda")
 
@@ -36,15 +68,13 @@ image.save("astronaut_rides_horse.png")
 ```
 For more detailed instructions, use-cases and examples in JAX follow the instructions [here](https://github.com/huggingface/diffusers#text-to-image-generation-with-stable-diffusion)
 
-### Use with GitHub Repository <span style="color:crimson">(now deprecated)</span>, <span style="color:darkgreen">ComfyUI or Automatic1111</span>
+### Original GitHub Repository
 
 1. Download the weights 
-   - [v1-5-pruned-emaonly.safetensors](https://huggingface.co/sd-legacy/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors) - ema-only weight. uses less VRAM - suitable for inference
-   - [v1-5-pruned.safetensors](https://huggingface.co/sd-legacy/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors) - ema+non-ema weights. uses more VRAM - suitable for fine-tuning
+   - [v1-5-pruned-emaonly.ckpt](https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt) - 4.27GB, ema-only weight. uses less VRAM - suitable for inference
+   - [v1-5-pruned.ckpt](https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt) - 7.7GB, ema+non-ema weights. uses more VRAM - suitable for fine-tuning
 
-2. Follow instructions [here](https://github.com/runwayml/stable-diffusion). <span style="color:crimson">(now deprecated)</span>
-
-3. <span style="color:darkgreen">Use locally with <a href="https://github.com/comfyanonymous/ComfyUI">ComfyUI</a>, <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">AUTOMATIC1111</a>, <a href="https://github.com/vladmandic/automatic">SD.Next</a>, <a href="https://github.com/invoke-ai/InvokeAI">InvokeAI</a></span>
+2. Follow instructions [here](https://github.com/runwayml/stable-diffusion).
 
 ## Model Details
 - **Developed by:** Robin Rombach, Patrick Esser
@@ -157,8 +187,8 @@ Currently six Stable Diffusion checkpoints are provided, which were trained as f
 filtered to images with an original size `>= 512x512`, estimated aesthetics score `> 5.0`, and an estimated watermark probability `< 0.5`. The watermark estimate is from the LAION-5B metadata, the aesthetics score is estimated using an [improved aesthetics estimator](https://github.com/christophschuhmann/improved-aesthetic-predictor)).
 - [`stable-diffusion-v1-3`](https://huggingface.co/CompVis/stable-diffusion-v1-3): Resumed from `stable-diffusion-v1-2` - 195,000 steps at resolution `512x512` on "laion-improved-aesthetics" and 10 % dropping of the text-conditioning to improve [classifier-free guidance sampling](https://arxiv.org/abs/2207.12598).
 - [`stable-diffusion-v1-4`](https://huggingface.co/CompVis/stable-diffusion-v1-4) Resumed from `stable-diffusion-v1-2` - 225,000 steps at resolution `512x512` on "laion-aesthetics v2 5+" and 10 % dropping of the text-conditioning to improve [classifier-free guidance sampling](https://arxiv.org/abs/2207.12598).
-- [`stable-diffusion-v1-5`](https://huggingface.co/sd-legacy/stable-diffusion-v1-5) Resumed from `stable-diffusion-v1-2` - 595,000 steps at resolution `512x512` on "laion-aesthetics v2 5+" and 10 % dropping of the text-conditioning to improve [classifier-free guidance sampling](https://arxiv.org/abs/2207.12598).
-- [`stable-diffusion-inpainting`](https://huggingface.co/sd-legacy/stable-diffusion-inpainting) Resumed from `stable-diffusion-v1-5` - then 440,000 steps of inpainting training at resolution 512x512 on “laion-aesthetics v2 5+” and 10% dropping of the text-conditioning. For inpainting, the UNet has 5 additional input channels (4 for the encoded masked-image and 1 for the mask itself) whose weights were zero-initialized after restoring the non-inpainting checkpoint. During training, we generate synthetic masks and in 25% mask everything.
+- [`stable-diffusion-v1-5`](https://huggingface.co/runwayml/stable-diffusion-v1-5) Resumed from `stable-diffusion-v1-2` - 595,000 steps at resolution `512x512` on "laion-aesthetics v2 5+" and 10 % dropping of the text-conditioning to improve [classifier-free guidance sampling](https://arxiv.org/abs/2207.12598).
+- [`stable-diffusion-inpainting`](https://huggingface.co/runwayml/stable-diffusion-inpainting) Resumed from `stable-diffusion-v1-5` - then 440,000 steps of inpainting training at resolution 512x512 on “laion-aesthetics v2 5+” and 10% dropping of the text-conditioning. For inpainting, the UNet has 5 additional input channels (4 for the encoded masked-image and 1 for the mask itself) whose weights were zero-initialized after restoring the non-inpainting checkpoint. During training, we generate synthetic masks and in 25% mask everything.
 
 - **Hardware:** 32 x 8 x A100 GPUs
 - **Optimizer:** AdamW
