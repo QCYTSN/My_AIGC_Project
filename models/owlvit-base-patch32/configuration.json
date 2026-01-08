@@ -1,0 +1,1 @@
+{"framework": "pytorch", "task": "zero-shot-object-detection", "allow_remote": true}
