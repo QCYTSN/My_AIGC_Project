@@ -18,3 +18,10 @@ __pycache__/
 env/
 venv/models/
 models_temp/
+models/
+results/
+outputs/
+__pycache__/
+*.safetensors
+*.bin
+*.pth
