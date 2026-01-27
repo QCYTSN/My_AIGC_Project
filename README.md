@@ -108,7 +108,7 @@ If you find this project useful, please cite:
 
 ```bibtex
 @misc{spatial_gated_attention_2026,
-  author = {Your Name},
+  author = {Fengkai Gao},
   title = {Training-Free Concept Disentanglement via Detection-Guided Attention Control},
   year = {2026},
   publisher = {GitHub}
