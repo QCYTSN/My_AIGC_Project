@@ -1,0 +1,7 @@
+path: /root/My_AIGC_Project/dataset_train  # 数据的根目录
+train: images  # 训练集图片 (相对于 path)
+val: images    # 验证集图片 (数据少，直接复用训练集)
+
+# 类别信息
+nc: 1          # 只有 1 个类别
+names: ['eye'] # 类名
