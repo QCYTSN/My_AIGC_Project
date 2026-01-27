@@ -1,12 +1,3 @@
-没问题，这是为您精心准备的**最终版 `README.md**`。
-
-这个版本已经整合了我们刚刚跑出来的**最新数据**（包括猫和狗的对比），并且采用了非常标准的**学术顶会（CVPR/ICCV）代码库格式**。
-
-请在您的项目根目录下新建或清空 `README.md` 文件，将下面的内容**一次性全选复制粘贴**进去保存即可。
-
----
-
-```markdown
 # Training-Free Concept Disentanglement in T2I Generation via Detection-Guided Attention Control
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
